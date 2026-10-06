@@ -1,0 +1,11 @@
+{
+  "name": "semantic-grep",
+  "version": "0.1.0",
+  "description": "A 'search' tool: ranks every function (or file) under a glob by a System One model (Jev, or the open-source decider) against a plain-language query.",
+  "userConfig": {
+    "base_url": { "type": "string", "title": "System One base URL", "description": "Serves POST /v1/systemone. Local decider: http://127.0.0.1:8000. Jev: TypeSafe's API base URL.", "default": "http://127.0.0.1:8000" },
+    "api_key": { "type": "string", "title": "API key", "description": "Sent as 'Authorization: Bearer <key>' when set.", "sensitive": true, "default": "" },
+    "batch": { "type": "number", "title": "Decisions per request", "description": "Max parallel decisions (questions) per /v1/systemone request; a file with more is split.", "default": 64 },
+    "parallel": { "type": "number", "title": "Parallel requests", "description": "Requests in flight at once.", "default": 4 }
+  }
+}

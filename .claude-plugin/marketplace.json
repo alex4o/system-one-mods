@@ -1,0 +1,16 @@
+{
+  "name": "system-one-mods",
+  "owner": { "name": "alex4o" },
+  "plugins": [
+    {
+      "name": "read-stub",
+      "source": "./read-stub",
+      "description": "On a full Read of a big source file, a System One model decides per function/method/const whether to include it; the rest become stubs."
+    },
+    {
+      "name": "semantic-grep",
+      "source": "./semantic-grep",
+      "description": "A 'search' tool: a System One model reads each file and decides, in parallel, which functions do what a plain-language query asks."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "read-stub",
+  "version": "0.2.0",
+  "description": "On a full Read of a big source file, a System One model (Jev, or the open-source decider) decides per function/method/const whether to include it; the rest become stubs.",
+  "userConfig": {
+    "base_url": {
+      "type": "string",
+      "title": "System One base URL",
+      "description": "Serves POST /v1/systemone. Local decider: http://127.0.0.1:8000. Jev: TypeSafe's API base URL (as TYPESAFE_BASE_URL).",
+      "default": "http://127.0.0.1:8000"
+    },
+    "api_key": {
+      "type": "string",
+      "title": "API key",
+      "description": "Sent as 'Authorization: Bearer <key>' when set. Empty for a local decider.",
+      "sensitive": true,
+      "default": ""
+    },
+    "keep_at": {
+      "type": "number",
+      "title": "Include threshold",
+      "description": "p(relevant) at or above this keeps a symbol's full body.",
+      "default": 0.5
+    }
+  }
+}
